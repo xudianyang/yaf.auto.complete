@@ -6,7 +6,7 @@ Yaf框架之PhpStrom代码自动补全（屏蔽IDE undefined，全命名空间�
 
 ##使用说明
 
-开发Yaf，在IDE中打开/导入本文件即可
+Yaf开发，在IDE中打开/导入本文件即可
 如果IDE自带 Include Path 功能(如：PhpStorm)，设置该文件路径即可.
 
 ##PhpStorm 另一种方法:
@@ -18,7 +18,7 @@ WinRAR打开 <Phpstorm_Dir>/plugins/php/lib/php.jar 文件
 
      (php.jar拷贝来源PhpStorm 7.1.3，其他版本如存在兼容性问题，请自行按上面方面进行处理，覆盖php.jar时注意备份)
 
-注意：替换前请备份php.jar 若发生错误便于恢复
+注意：替换前请备份php.jar若发生错误便于恢复
 
 如有勘误，请告知Phpboy.
 
