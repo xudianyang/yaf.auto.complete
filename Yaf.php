@@ -67,11 +67,11 @@ namespace Yaf
          * Dispatcher实例,即分发器.
          *
          * PHP代码可以这样获取：
-         * $dispather = Application::app()->getDispatcher();
+         * $dispatcher = Application::app()->getDispatcher();
          *
          * @var Dispatcher
          */
-        protected $dispather;
+        protected $dispatcher;
 
         /**
          * (Yaf >= 2.2.9) 
@@ -188,10 +188,11 @@ namespace Yaf
          * 运行回调函数，一般在命令行模式下运行.
          *
          * @param callable $entry 回调函数
-         * @param mixed $paramester 零个或者多个回调函数参数
+         * @param mixed $parameter 零个或者多个回调函数参数
+         *
          * @return void
          */
-        public function execute(callale $entry, $paramester=null){}
+        public function execute(callable $entry, $parameter = null){}
 
         /**
          * (Yaf >= 2.2.9) 
@@ -369,7 +370,7 @@ namespace Yaf
          * 设置无效，并且不会渲染模板.
          *
          * PHP代码可以这样设置：
-         * Dispather::getInstance()->autoRender($flag);
+         * Dispatcher::getInstance()->autoRender($flag);
          *
          * @var Boolean
          */
@@ -386,7 +387,7 @@ namespace Yaf
          * 当$this->_auto_render=1时，响应正文包括渲染模板的结果，反之则不包括.
          *
          * PHP代码可以这样设置：
-         * Dispather::getInstance()->returnResponse($flag);
+         * Dispatcher::getInstance()->returnResponse($flag);
          *
          * @var Boolean
          */
@@ -396,10 +397,10 @@ namespace Yaf
          * (Yaf >= 2.2.9) 
          * 立即输出响应正文开头，默认为0.
          * 默认情况下，Yaf自动渲染调用Yaf\Controller_Abstract的render方法，渲染模板.
-         * 当此属性设置为1时，Yaf调用Yaf\Contrller_Abstract的display方法，直接渲染并输出，但不设置Yaf\Response_Abstract实例的_body属性.
+         * 当此属性设置为1时，Yaf调用Yaf\Controller_Abstract的display方法，直接渲染并输出，但不设置Yaf\Response_Abstract实例的_body属性.
          *
          * PHP代码可以这样设置：
-         * Dispather::getInstance()->flushInstantly($flag);
+         * Dispatcher::getInstance()->flushInstantly($flag);
          *
          * @var Boolean
          */
@@ -410,7 +411,7 @@ namespace Yaf
          * 默认模块名
          *
          * PHP代码可以这样设置：
-         * Dispather::getInstance()->setDefaultModule($module);
+         * Dispatcher::getInstance()->setDefaultModule($module);
          *
          * @var String
          */
@@ -421,7 +422,7 @@ namespace Yaf
          * 默认控制器
          *
          * PHP代码可以这样设置：
-         * Dispather::getInstance()->setDefaultController($controller);
+         * Dispatcher::getInstance()->setDefaultController($controller);
          *
          * @var String
          */
@@ -432,7 +433,7 @@ namespace Yaf
          * 默认动作名
          *
          * PHP代码可以这样设置：
-         * Dispather::getInstance()->setDefaultAction($action);
+         * Dispatcher::getInstance()->setDefaultAction($action);
          *
          * @var String
          */
@@ -443,7 +444,7 @@ namespace Yaf
          * 已注册的插件对象
          *
          * PHP代码可以这样注册插件：
-         * Dispather::getInstance()::registerPlugin(new ModuleInitPlugin());
+         * Dispatcher::getInstance()::registerPlugin(new ModuleInitPlugin());
          *
          * @var Array
          */
@@ -594,11 +595,11 @@ namespace Yaf
          *
          * @return mixed
          */
-        public function flushInstantly(){}
+        public function flushInstantly($flag){}
 
         /**
          * (Yaf >= 2.2.9) 
-         * 返回当前Dispatche实例（单例模式）
+         * 返回当前Dispatcher实例（单例模式）
          *
          * @return Dispatcher
          */
@@ -945,11 +946,11 @@ namespace Yaf
          * @param string $module
          * @param string $controller
          * @param string $action
-         * @param string $paramters
+         * @param string $parameters
          *
          * @return Boolean
          */
-        public function forward($module, $controller, $action, $paramters){}
+        public function forward($module, $controller, $action, $parameters){}
 
         /**
          * (Yaf >= 2.2.9) 
@@ -1679,7 +1680,7 @@ namespace Yaf
          * (Yaf >= 2.2.9) 
          * 获取当前控制器名
          *
-         * @reurn String
+         * @return String
          */
         public function getControllerName(){}
 
@@ -1695,7 +1696,7 @@ namespace Yaf
          * (Yaf >= 2.2.9) 
          * 设置请求的模块名
          *
-         * @param sring $name 模块名
+         * @param string $name 模块名
          *
          * @return Boolean
          */
@@ -1767,7 +1768,7 @@ namespace Yaf
          * (Yaf >= 2.2.9) 
          * 设置请求的URI
          *
-         * @param sring $uri
+         * @param string $uri
          *
          * @return Request_Abstract
          */
@@ -2048,6 +2049,16 @@ namespace Yaf
          * @return Boolean
          */
         public function route(Request_Abstract $request){}
+
+        /**
+         * (Yaf >= 2.3.2)
+         * 组合uri，路由解析的逆操作
+         *
+         * @param array $info
+         * @param array $query
+         * @return String
+         */
+        public function assemble($info, $query){}
     }
 
     /**
@@ -2315,6 +2326,16 @@ namespace Yaf
         public function offsetExists($name){}
 
         /**
+         * (Yaf >= 2.2.9)
+         * 获取session变量
+         *
+         * @param string $name 变量名
+         *
+         * @return Session
+         */
+        public function offsetGet($name){}
+
+        /**
          * (Yaf >= 2.2.9) 
          * 设置session变量
          *
@@ -2420,10 +2441,12 @@ namespace Yaf\Config
          * 设置配置节点值（无效）
          *
          * @deprecated 约定ini文件的配置不可写
+         * @param string $name 变量名
+         * @param mixed $value
          *
          * @return false
          */
-        public function set(){}
+        public function set($name, $value){}
 
         /**
          * (Yaf >= 2.2.9) 
@@ -2478,10 +2501,11 @@ namespace Yaf\Config
          * 撤消某个配置节点（无效）
          *
          * @deprecated 约定ini文件的配置不可写
+         * @param string $name 变量名
          *
          * @return false
          */
-        public function offsetUnset(){}
+        public function offsetUnset($name){}
 
         /**
          * (Yaf >= 2.2.9) 
@@ -2498,10 +2522,32 @@ namespace Yaf\Config
          * 设置配置节点值（无效）
          *
          * @deprecated 约定ini文件的配置不可写
+         * @param string $name 变量名
+         * @param mixed $value
          *
          * @return false
          */
-        public function offsetSet(){}
+        public function offsetSet($name, $value){}
+
+        /**
+         * (Yaf >= 2.2.9)
+         * 获取配置节点的值
+         * 当不传递$name参数时，返回配置对象本身
+         *
+         * @param string $name
+         * @return Ini
+         */
+        public function offsetGet($name){}
+
+        /**
+         * (Yaf >= 2.2.9)
+         * 获取配置节点的值
+         * 当不传递$name参数时，返回配置对象本身
+         *
+         * @param string $name
+         * @return Ini
+         */
+        public function get($name){}
 
         /**
          * (Yaf >= 2.2.9) 
@@ -2518,10 +2564,30 @@ namespace Yaf\Config
          * 设置配置节点值（无效）
          *
          * @deprecated 约定ini文件的配置不可写
+         * @param string $name 变量名
+         * @param mixed $value
          *
          * @return false
          */
-        public function __set(){}
+        public function __set($name, $value){}
+
+        /**
+         * (Yaf >= 2.2.9)
+         *
+         * 将配置转化为数组
+         *
+         * @return array|void
+         */
+        public function toArray(){}
+
+        /**
+         * (Yaf >= 2.2.9)
+         *
+         * 检测配置是否只读
+         *
+         * @return Boolean
+         */
+        public function readonly(){}
     }
 
     /**
@@ -2633,6 +2699,26 @@ namespace Yaf\Config
         public function offsetExists($name){}
 
         /**
+         * (Yaf >= 2.2.9)
+         * 获取配置节点的值
+         * 当不传递$name参数时，返回配置对象本身
+         *
+         * @param string $name
+         * @return Ini
+         */
+        public function offsetGet($name){}
+
+        /**
+         * (Yaf >= 2.2.9)
+         * 获取配置节点的值
+         * 当不传递$name参数时，返回配置对象本身
+         *
+         * @param string $name
+         * @return Ini
+         */
+        public function get($name){}
+
+        /**
          * (Yaf >= 2.2.9) 
          * 设置配置节点值
          *
@@ -2663,6 +2749,24 @@ namespace Yaf\Config
          * @return Boolean
          */
         public function __set($name, $value){}
+
+        /**
+         * (Yaf >= 2.2.9)
+         *
+         * 将配置转化为数组
+         *
+         * @return array|void
+         */
+        public function toArray(){}
+
+        /**
+         * (Yaf >= 2.2.9)
+         *
+         * 检测配置是否只读
+         *
+         * @return Boolean
+         */
+        public function readonly(){}
     }
 }
 
@@ -3094,6 +3198,7 @@ namespace Yaf\Response
 namespace Yaf\Route
 {
     use Yaf\Route_Interface;
+    use Yaf\Request_Abstract;
 
     /**
      * (Yaf >= 2.2.9) 
@@ -3140,6 +3245,16 @@ namespace Yaf\Route
          * @return Boolean
          */
         public function route(Request_Abstract $request){}
+
+        /**
+         * (Yaf >= 2.3.2)
+         * 组合uri，路由解析的逆操作
+         *
+         * @param array $info
+         * @param array $query
+         * @return String
+         */
+        public function assemble($info, $query){}
     }
 
     /**
@@ -3208,6 +3323,16 @@ namespace Yaf\Route
          * @return Boolean
          */
         public function route(Request_Abstract $request){}
+
+        /**
+         * (Yaf >= 2.3.2)
+         * 组合uri，路由解析的逆操作
+         *
+         * @param array $info
+         * @param array $query
+         * @return String
+         */
+        public function assemble($info, $query){}
     }
 
     /**
@@ -3253,7 +3378,6 @@ namespace Yaf\Route
          *
          * @param string $match 匹配模式（正则表达式）
          * @param array $route 路由信息
-         * @param array $map 模式分组的映射关系
          * @param array $verify
          */
         public function __construct($match, $route, $verify){}
@@ -3267,6 +3391,16 @@ namespace Yaf\Route
          * @return Boolean
          */
         public function route(Request_Abstract $request){}
+
+        /**
+         * (Yaf >= 2.3.2)
+         * 组合uri，路由解析的逆操作
+         *
+         * @param array $info
+         * @param array $query
+         * @return String
+         */
+        public function assemble($info, $query){}
     }
 
     /**
@@ -3322,6 +3456,16 @@ namespace Yaf\Route
          * @return Boolean
          */
         public function route(Request_Abstract $request){}
+
+        /**
+         * (Yaf >= 2.3.2)
+         * 组合uri，路由解析的逆操作
+         *
+         * @param array $info
+         * @param array $query
+         * @return String
+         */
+        public function assemble($info, $query){}
     }
 
     /**
@@ -3359,6 +3503,16 @@ namespace Yaf\Route
          * @return Boolean
          */
         public function route(Request_Abstract $request){}
+
+        /**
+         * (Yaf >= 2.3.2)
+         * 组合uri，路由解析的逆操作
+         *
+         * @param array $info
+         * @param array $query
+         * @return String
+         */
+        public function assemble($info, $query){}
     }
 }
 
