@@ -26,7 +26,7 @@ WinRAR打开 <Phpstorm_Dir>/plugins/php/lib/php.jar 文件
 
 ![Yaf Auto Complete][1]
 
-  [1]: http://www.phpboy.net/wp-content/uploads/2014/04/Yaf.auto_.complete.jpg
+  [1]: http://www.phpboy.net/wp-content/uploads/2014/04/Yaf.auto_.complete-e1396700109456.jpg
 
 ##作者
 
