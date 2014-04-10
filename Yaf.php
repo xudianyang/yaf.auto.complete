@@ -603,7 +603,7 @@ namespace Yaf
          *
          * @return Dispatcher
          */
-        public function getInstance(){}
+        static public function getInstance(){}
 
         /**
          * (Yaf >= 2.2.9) 
@@ -1190,7 +1190,7 @@ namespace Yaf
          *
          * @return Loader
          */
-        public function getInstance($library, $global){}
+        static public function getInstance($library, $global){}
 
         /**
          * (Yaf >= 2.2.9) 
