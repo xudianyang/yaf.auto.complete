@@ -1,12 +1,12 @@
 <?php
 /**
- * Yaf Develop Auto Compelete
+ * Yaf Develop Auto Complete
  *
- * Yaf框架之PhpStrom代码自动补全（屏蔽IDE undefined，全命名空间，中文详细文档，比手册更详细）
+ * Yaf框架之PhpStorm代码自动补全（屏蔽IDE undefined，全命名空间，中文详细文档，比手册更详细）
  *
  * 本文件使用方式：
  *
- * 开发Yaf，在IDE中打开/导入本文件即可
+ * Yaf开发，在IDE中打开/导入本文件即可
  * 如果IDE自带 Include Path 功能(如：PhpStorm)，设置该文件路径即可.
  *
  * PhpStorm 另一种方法:
@@ -293,7 +293,7 @@ namespace Yaf
     }
 
     /**
-     * (Yaf >= 2.2.9) 
+     * (Yaf >= 2.2.9)
      * Class Bootstrap_Abstract
      *
      * Bootstrap是用来在Application运行(run)之前做一些初始化工作的机制.
@@ -525,7 +525,7 @@ namespace Yaf
          * 设置一个用户定义的错误处理函数（封装了PHP内置的set_error_handler函数）
          *
          * @param callable $callback PHP中可回调的结构
-         * @param $error_type 处理的错误类型（默认：E_ALL | E_STRICT）
+         * @param $error_type int 处理的错误类型（默认：E_ALL | E_STRICT）
          *
          * @return Dispatcher
          */
@@ -1175,7 +1175,7 @@ namespace Yaf
          * (Yaf >= 2.2.9) 
          * 自动装载类
          *
-         * @param $class 类名
+         * @param $class string 类名
          *
          * @return Boolean
          */
@@ -1222,7 +1222,7 @@ namespace Yaf
          * (Yaf >= 2.2.9) 
          * 判断一个类, 是否是本地类.
          *
-         * @param $class_name 类名
+         * @param $class_name string 类名
          *
          * @return Boolean
          */
@@ -1232,7 +1232,7 @@ namespace Yaf
          * (Yaf >= 2.2.9) 
          * 手动导入文件
          *
-         * @param $file include的全路径文件名
+         * @param $file string include的全路径文件名
          *
          * @return Boolean
          */
@@ -3231,8 +3231,8 @@ namespace Yaf\Route
          * (Yaf >= 2.2.9) 
          * 构造方法
          *
-         * @param $controller_prefer 表示路由结果是作为动作的路由结果，还是控制器的路由结果，默认的是动作路由结果.
-         * @param $delim 表示一个分隔符，如果设置了这个分隔符，那么在REQUEST_URI中，分隔符之前的作为路由信息载体，而之后的作为请求参数.
+         * @param $controller_prefer boolean 表示路由结果是作为动作的路由结果，还是控制器的路由结果，默认的是动作路由结果.
+         * @param $delim string 表示一个分隔符，如果设置了这个分隔符，那么在REQUEST_URI中，分隔符之前的作为路由信息载体，而之后的作为请求参数.
          */
         public function __construct($controller_prefer, $delim){}
 
@@ -3490,7 +3490,7 @@ namespace Yaf\Route
          * (Yaf >= 2.2.9) 
          * 构造方法
          *
-         * @param $var 全局路由变量名
+         * @param $var string 全局路由变量名
          */
         public function __construct($var){}
 
