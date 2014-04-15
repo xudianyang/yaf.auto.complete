@@ -1,4 +1,4 @@
-#Yaf IDE Auto Complete
+#Yaf/Yar/XHprof IDE Auto Complete
 
 Yaf Develop Auto Compelete
 

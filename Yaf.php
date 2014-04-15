@@ -516,7 +516,7 @@ namespace Yaf
          * (Yaf >= 2.2.9) 
          * 返回请求对象实例
          *
-         * @return Response_Abstract
+         * @return Request_Abstract
          */
         public function getRequest(){}
 
@@ -1236,7 +1236,7 @@ namespace Yaf
          *
          * @return Boolean
          */
-        public function import($file){}
+        static public function import($file){}
 
         /**
          * (Yaf >= 2.2.9) 
@@ -1648,7 +1648,7 @@ namespace Yaf
          *
          * @return mixed
          */
-        public function getParam($name, $default){}
+        public function getParam($name, $default = NULL){}
 
         /**
          * (Yaf >= 2.2.9) 
@@ -2794,7 +2794,7 @@ namespace Yaf\Request
          * @param string $request_uri Request URI（可选）
          * @param string $base_uri Base URI（可选）
          */
-        public function __construct($request_uri, $base_uri){}
+        public function __construct($request_uri = NULL, $base_uri = NULL){}
         /**
          * (Yaf >= 2.2.9) 
          * 获取$_GET中名为$name的参数值
