@@ -1899,6 +1899,16 @@ namespace Yaf
         public function setBody($body, $name){}
 
         /**
+         * (Yaf >= 2.2.9)
+         * 获取类型为$name的响应正文内容
+         *
+         * @param string $name 响应正文类型，默认为content
+         *
+         * @return String
+         */
+        public function getBody($name = 'content'){}
+
+        /**
          * (Yaf >= 2.2.9) 
          * 设置类型为$name的响应正文内容, 如已存在，则追加到原来正文的后面
          *
