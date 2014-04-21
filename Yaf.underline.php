@@ -2,7 +2,7 @@
 /**
  * Yaf Develop Auto Complete
  *
- * Yaf框架之PhpStorm代码自动补全（屏蔽IDE undefined，全命名空间，中文详细文档，比手册更详细）
+ * Yaf框架之PhpStorm代码自动补全（屏蔽IDE undefined，中文详细文档，比手册更详细）
  *
  * 本文件使用方式：
  *
