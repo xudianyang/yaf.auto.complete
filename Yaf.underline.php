@@ -46,7 +46,7 @@ final class Yaf_Application
      * (Yaf >= 2.2.9)
      * 全局配置实例
      *
-     * 根据实例化Yaf_Application时传入的ini配置文件路径或者配置数组及配置节点名称，实例化的Ini或者Simple对象.
+     * 根据实例化Yaf_Application时传入的ini配置文件路径或者配置数组及配置节点名称，实例化的Yaf_Config_Ini或者Yaf_Config_Simple对象.
      *
      * PHP代码可以这样获取：
      *
@@ -2409,7 +2409,7 @@ class Yaf_Exception extends Exception
 
 /**
  * (Yaf >= 2.2.9)
- * Class Yaf_Config
+ * Class Yaf_Config_Ini
  *
  * Ini存储在Ini文件的配置数据提供了适配器
  *
@@ -2419,7 +2419,7 @@ final class Yaf_Config_Ini extends Yaf_Config_Abstract
 {
     /**
      * (Yaf >= 2.2.9)
-     * 构造方法，初始化Ini对象
+     * 构造方法，初始化Yaf_Config_Ini对象
      *
      * @param string $filename ini文件全路径
      * @param string $section 初始化时的配置节点名称
@@ -2602,7 +2602,7 @@ final class Yaf_Config_Simple extends Yaf_Config_Abstract
 {
     /**
      * (Yaf >= 2.2.9)
-     * 构造方法，初始化Simple对象
+     * 构造方法，初始化Yaf_Config_Simple对象
      *
      * @param string $config 储存配置的数组
      * @param string $readonly 是否只读
