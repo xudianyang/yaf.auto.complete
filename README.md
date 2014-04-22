@@ -11,7 +11,7 @@ Yaf开发，在IDE中打开/导入本文件即可
 
 ##PhpStorm 另一种方法:
 WinRAR打开 <Phpstorm_Dir>/plugins/php/lib/php.jar 文件
-复制 Yaf.php 到路径：com/jetbrains/php/lang/psi/stubs/data/
+复制 Yaf.namespace.php,Yaf.underline.php 到路径：com/jetbrains/php/lang/psi/stubs/data/
 保存文件，重启Phpstorm.
 
 这里也提供做好的php.jar直接覆盖即可。

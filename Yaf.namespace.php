@@ -529,7 +529,7 @@ namespace Yaf
          *
          * @return Dispatcher
          */
-        public function setErrorHandler(callable $callback, $error_type){}
+        public function setErrorHandler(callable $callback, $error_type = 32767){}
 
         /**
          * (Yaf >= 2.2.9) 
@@ -1614,7 +1614,7 @@ namespace Yaf
          *
          * @return mixed
          */
-        public function getServer($name, $default){}
+        public function getServer($name, $default = null){}
 
         /**
          * (Yaf >= 2.2.9) 
@@ -1625,7 +1625,7 @@ namespace Yaf
          *
          * @return mixed
          */
-        public function getEnv($name, $default){}
+        public function getEnv($name, $default = null){}
 
         /**
          * (Yaf >= 2.2.9) 
@@ -1648,7 +1648,7 @@ namespace Yaf
          *
          * @return mixed
          */
-        public function getParam($name, $default = NULL){}
+        public function getParam($name, $default = null){}
 
         /**
          * (Yaf >= 2.2.9) 
@@ -1896,7 +1896,7 @@ namespace Yaf
          *
          * @return Boolean
          */
-        public function setBody($body, $name){}
+        public function setBody($body, $name = 'content'){}
 
         /**
          * (Yaf >= 2.2.9)
@@ -1917,7 +1917,7 @@ namespace Yaf
          *
          * @return Boolean
          */
-        public function appendBody($body, $name){}
+        public function appendBody($body, $name = 'content'){}
 
         /**
          * (Yaf >= 2.2.9) 
@@ -1928,7 +1928,7 @@ namespace Yaf
          *
          * @return Boolean
          */
-        public function prependBody($body, $name){}
+        public function prependBody($body, $name = 'content'){}
 
         /**
          * (Yaf >= 2.2.9) 
@@ -2872,7 +2872,7 @@ namespace Yaf\Request
          *
          * @return mixed
          */
-        public function get($name, $default){}
+        public function get($name, $default = null){}
 
         /**
          * (Yaf >= 2.2.9) 
@@ -2974,7 +2974,7 @@ namespace Yaf\Request
          *
          * @return mixed
          */
-        public function get($name, $default){}
+        public function get($name, $default = null){}
 
         /**
          * (Yaf >= 2.2.9) 
@@ -3244,7 +3244,7 @@ namespace Yaf\Route
          * @param $controller_prefer boolean 表示路由结果是作为动作的路由结果，还是控制器的路由结果，默认的是动作路由结果.
          * @param $delim string 表示一个分隔符，如果设置了这个分隔符，那么在REQUEST_URI中，分隔符之前的作为路由信息载体，而之后的作为请求参数.
          */
-        public function __construct($controller_prefer, $delim){}
+        public function __construct($controller_prefer = 0, $delim = ''){}
 
         /**
          * (Yaf >= 2.2.9) 
