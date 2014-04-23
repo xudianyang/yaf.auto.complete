@@ -2900,12 +2900,13 @@ namespace Yaf\Request
          * (Yaf >= 2.2.9) 
          * 构造方法
          *
-         * @param string $method 方法名
-         * @param string $module 模块名
-         * @param string $controller 控制器名
-         * @param string $action 动作名
+         * @param mixed | string $method 方法名
+         * @param mixed | string $module 模块名
+         * @param mixed | string $controller 控制器名
+         * @param mixed | string $action 动作名
+         * @param mixed | array $parameters 请求的参数
          */
-        public function __construct($method, $module, $controller, $action){}
+        public function __construct($method = null, $module = null, $controller = null, $action = null, $parameters = null){}
 
         /**
          * (Yaf >= 2.2.9) 
