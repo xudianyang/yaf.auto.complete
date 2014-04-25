@@ -1184,7 +1184,7 @@ final class Yaf_Loader
      *
      * @return Yaf_Loader
      */
-    static public function getInstance($library, $global){}
+    static public function getInstance($library = null, $global = null){}
 
     /**
      * (Yaf >= 2.2.9)

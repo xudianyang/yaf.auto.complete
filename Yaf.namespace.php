@@ -1190,7 +1190,7 @@ namespace Yaf
          *
          * @return Loader
          */
-        static public function getInstance($library, $global){}
+        static public function getInstance($library = null, $global = null){}
 
         /**
          * (Yaf >= 2.2.9) 
