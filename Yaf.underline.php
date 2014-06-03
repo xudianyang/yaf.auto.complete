@@ -499,10 +499,10 @@ final class Yaf_Dispatcher
      */
     public function getApplication(){}
 
-    /*
+    /**
      * 返回路由器实例
      *
-     * @return Router
+     * @return Yaf_Router
      */
     public function getRouter(){}
 
