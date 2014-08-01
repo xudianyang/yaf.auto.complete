@@ -69,7 +69,7 @@ final class Yaf_Application
 
     /**
      * (Yaf >= 2.2.9)
-     * 过特殊的方式实现了单利模式, 此属性保存当前实例.
+     * 过特殊的方式实现了单例模式, 此属性保存当前实例.
      *
      * PHP代码可以这样获取：
      * $app = Yaf_Application::app();
@@ -345,7 +345,7 @@ final class Yaf_Dispatcher
 
     /**
      * (Yaf >= 2.2.9)
-     * Yaf_Dispatcher实现了单利模式，此属性保存当前实例.
+     * Yaf_Dispatcher实现了单例模式，此属性保存当前实例.
      *
      * PHP代码可以这样获取：
      * $dispatcher = Yaf_Dispatcher::getInstance();
@@ -1121,7 +1121,7 @@ final class Yaf_Loader
 
     /**
      * (Yaf >= 2.2.9)
-     * 当前Loader实例（单利模式）
+     * 当前Loader实例（单例模式）
      *
      * @var Yaf_Loader
      */
