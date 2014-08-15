@@ -864,7 +864,7 @@ abstract class Yaf_Controller_Abstract
      *
      * @return String
      */
-    protected function render($action_name, $var_array){}
+    protected function render($action_name, $var_array = array()){}
 
     /**
      * (Yaf >= 2.2.9)
@@ -875,7 +875,7 @@ abstract class Yaf_Controller_Abstract
      *
      * @return String
      */
-    protected function display($action_name, $var_array){}
+    protected function display($action_name, $var_array = array()){}
 
     /**
      * (Yaf >= 2.2.9)
@@ -1066,7 +1066,7 @@ interface Yaf_View_Interface
      *
      * @return String
      */
-    public function render($tpl, $var_array);
+    public function render($tpl, $var_array = array());
 
     /**
      * (Yaf >= 2.2.9)
@@ -3111,7 +3111,7 @@ class Yaf_View_Simple implements Yaf_View_Interface
      *
      * @return Boolean
      */
-    public function display($tpl, $var_array){}
+    public function display($tpl, $var_array = array()){}
 
     /**
      * (Yaf >= 2.2.9)
@@ -3122,7 +3122,7 @@ class Yaf_View_Simple implements Yaf_View_Interface
      *
      * @return String
      */
-    public function render($tpl, $var_array){}
+    public function render($tpl, $var_array = array()){}
 
     /**
      * (Yaf >= 2.2.9)

@@ -870,7 +870,7 @@ namespace Yaf
          *
          * @return String
          */
-        protected function render($action_name, $var_array){}
+        protected function render($action_name, $var_array = array()){}
 
         /**
          * (Yaf >= 2.2.9) 
@@ -881,7 +881,7 @@ namespace Yaf
          *
          * @return String
          */
-        protected function display($action_name, $var_array){}
+        protected function display($action_name, $var_array = array()){}
 
         /**
          * (Yaf >= 2.2.9) 
@@ -1061,7 +1061,7 @@ namespace Yaf
          *
          * @return Boolean
          */
-        public function display($tpl, $var_array);
+        public function display($tpl, $var_array = array());
 
         /**
          * (Yaf >= 2.2.9) 
@@ -1072,7 +1072,7 @@ namespace Yaf
          *
          * @return String
          */
-        public function render($tpl, $var_array);
+        public function render($tpl, $var_array = array());
 
         /**
          * (Yaf >= 2.2.9) 
@@ -3131,7 +3131,7 @@ namespace Yaf\View
          *
          * @return Boolean
          */
-        public function display($tpl, $var_array){}
+        public function display($tpl, $var_array = array()){}
 
         /**
          * (Yaf >= 2.2.9) 
@@ -3142,7 +3142,7 @@ namespace Yaf\View
          *
          * @return String
          */
-        public function render($tpl, $var_array){}
+        public function render($tpl, $var_array = array()){}
 
         /**
          * (Yaf >= 2.2.9) 
