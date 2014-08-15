@@ -944,7 +944,7 @@ abstract class Yaf_Controller_Abstract
      *
      * @return Boolean
      */
-    public function forward($module, $controller, $action, $parameters){}
+    public function forward($module, $controller = null, $action = null, $parameters = null){}
 
     /**
      * (Yaf >= 2.2.9)
