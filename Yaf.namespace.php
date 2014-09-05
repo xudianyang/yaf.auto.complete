@@ -1045,12 +1045,12 @@ namespace Yaf
          *
          * 当只有一个参数时，参数必须是Array类型，可以展开多个模板变量
          *
-         * @param string $name 变量名
+         * @param string | array $name 变量
          * @param string $value 变量值
          *
          * @return Boolean
          */
-        public function assign($name, $value);
+        public function assign($name, $value = null);
 
         /**
          * (Yaf >= 2.2.9) 
@@ -2434,7 +2434,7 @@ namespace Yaf\Config
          * @param string $filename ini文件全路径
          * @param string $section 初始化时的配置节点名称
          */
-        public function __construct($filename, $section){}
+        public function __construct($filename, $section = null){}
 
         /**
          * (Yaf >= 2.2.9) 
@@ -3107,7 +3107,7 @@ namespace Yaf\View
          *
          * @return Boolean
          */
-        public function assign($name, $value){}
+        public function assign($name, $value = null){}
 
         /**
          * (Yaf >= 2.2.9) 

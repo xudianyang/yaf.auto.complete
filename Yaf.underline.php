@@ -1044,7 +1044,7 @@ interface Yaf_View_Interface
      *
      * @return Boolean
      */
-    public function assign($name, $value);
+    public function assign($name, $value = null);
 
     /**
      * (Yaf >= 2.2.9)
@@ -2424,7 +2424,7 @@ final class Yaf_Config_Ini extends Yaf_Config_Abstract
      * @param string $filename ini文件全路径
      * @param string $section 初始化时的配置节点名称
      */
-    public function __construct($filename, $section){}
+    public function __construct($filename, $section = null){}
 
     /**
      * (Yaf >= 2.2.9)
@@ -3087,7 +3087,7 @@ class Yaf_View_Simple implements Yaf_View_Interface
      *
      * @return Boolean
      */
-    public function assign($name, $value){}
+    public function assign($name, $value = null){}
 
     /**
      * (Yaf >= 2.2.9)
