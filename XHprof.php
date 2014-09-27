@@ -32,7 +32,7 @@ define('SCRATCH_BUF_LEN',                       512);
 define('XHPROF_MODE_HIERARCHICAL',              1);
 define('XHPROF_MODE_SAMPLED',                   620002);
 
-function xhprof_disable(){}
+function xhprof_disable(){return array();}
 function xhprof_enable($flags = 0, $options = array()){}
-function xhprof_sample_disable(){}
+function xhprof_sample_disable(){return array();}
 function xhprof_sample_enable(){}
