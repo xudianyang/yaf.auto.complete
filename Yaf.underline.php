@@ -2007,7 +2007,7 @@ interface Yaf_Route_Interface
      * (Yaf >= 2.2.9)
      * 路由请求
      *
-     * @param $request
+     * @param mixed $request
      *
      * @return Boolean
      */

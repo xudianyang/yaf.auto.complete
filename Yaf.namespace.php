@@ -2013,7 +2013,7 @@ namespace Yaf
          * (Yaf >= 2.2.9) 
          * 路由请求
          *
-         * @param $request
+         * @param mixed $request
          *
          * @return Boolean
          */
