@@ -2013,11 +2013,11 @@ namespace Yaf
          * (Yaf >= 2.2.9) 
          * 路由请求
          *
-         * @param Request_Abstract $request
+         * @param $request
          *
          * @return Boolean
          */
-        public function route(Request_Abstract $request);
+        public function route($request);
 
         /**
          * (Yaf >= 2.3.2)
