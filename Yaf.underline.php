@@ -2011,7 +2011,7 @@ interface Yaf_Route_Interface
      *
      * @return Boolean
      */
-    public function route(Yaf_Request_Abstract $request);
+    public function route($request);
 
     /**
      * (Yaf >= 2.3.2)
@@ -2021,7 +2021,7 @@ interface Yaf_Route_Interface
      * @param array $query
      * @return String
      */
-    public function assemble ($info, $query);
+    public function assemble (array $info, array $query = null);
 }
 
 /**
