@@ -1642,7 +1642,7 @@ abstract class Yaf_Request_Abstract
      *
      * @return mixed
      */
-    public function getParam($name, $default = NULL){}
+    public function getParam($name, $default = null){}
 
     /**
      * (Yaf >= 2.2.9)
@@ -1938,9 +1938,9 @@ abstract class Yaf_Response_Abstract
      * (Yaf >= 2.2.9)
      * 获取响应报头
      *
-     * @deprecated 总是返回NULL
+     * @deprecated 总是返回null
      *
-     * @return NULL
+     * @return null
      */
     public function getHeader(){}
 
@@ -1958,9 +1958,9 @@ abstract class Yaf_Response_Abstract
      * (Yaf >= 2.2.9)
      * 设置响应报头
      *
-     * @deprecated 总是返回NULL
+     * @deprecated 总是返回null
      *
-     * @return NULL
+     * @return null
      */
     public function setHeader(){}
 
@@ -2789,7 +2789,7 @@ class Yaf_Request_Http extends Yaf_Request_Abstract
      * @param string $request_uri Request URI（可选）
      * @param string $base_uri Base URI（可选）
      */
-    public function __construct($request_uri = NULL, $base_uri = NULL){}
+    public function __construct($request_uri = null, $base_uri = null){}
     /**
      * (Yaf >= 2.2.9)
      * 获取$_GET中名为$name的参数值
@@ -2798,7 +2798,7 @@ class Yaf_Request_Http extends Yaf_Request_Abstract
      *
      * @return mixed
      */
-    public function getQuery($name){}
+    public function getQuery($name = null){}
 
     /**
      * (Yaf >= 2.2.9)
@@ -2808,7 +2808,7 @@ class Yaf_Request_Http extends Yaf_Request_Abstract
      *
      * @return mixed
      */
-    public function getRequest($name){}
+    public function getRequest($name = null){}
 
     /**
      * (Yaf >= 2.2.9)
@@ -2818,7 +2818,7 @@ class Yaf_Request_Http extends Yaf_Request_Abstract
      *
      * @return mixed
      */
-    public function getPost($name){}
+    public function getPost($name = null){}
 
     /**
      * (Yaf >= 2.2.9)
@@ -2828,7 +2828,7 @@ class Yaf_Request_Http extends Yaf_Request_Abstract
      *
      * @return mixed
      */
-    public function getCookie($name){}
+    public function getCookie($name = null){}
 
     /**
      * (Yaf >= 2.2.9)
@@ -2838,7 +2838,7 @@ class Yaf_Request_Http extends Yaf_Request_Abstract
      *
      * @return mixed
      */
-    public function getFiles($name){}
+    public function getFiles($name = null){}
 
     /**
      * (Yaf >= 2.2.9)
@@ -2901,7 +2901,7 @@ class Yaf_Request_Simple extends Yaf_Request_Abstract
      *
      * @return mixed
      */
-    public function getQuery($name){}
+    public function getQuery($name = null){}
 
     /**
      * (Yaf >= 2.2.9)
@@ -2911,7 +2911,7 @@ class Yaf_Request_Simple extends Yaf_Request_Abstract
      *
      * @return mixed
      */
-    public function getRequest($name){}
+    public function getRequest($name = null){}
 
     /**
      * (Yaf >= 2.2.9)
@@ -2921,7 +2921,7 @@ class Yaf_Request_Simple extends Yaf_Request_Abstract
      *
      * @return mixed
      */
-    public function getPost($name){}
+    public function getPost($name = null){}
 
     /**
      * (Yaf >= 2.2.9)
@@ -2931,7 +2931,7 @@ class Yaf_Request_Simple extends Yaf_Request_Abstract
      *
      * @return mixed
      */
-    public function getCookie($name){}
+    public function getCookie($name = null){}
 
     /**
      * (Yaf >= 2.2.9)
@@ -2941,7 +2941,7 @@ class Yaf_Request_Simple extends Yaf_Request_Abstract
      *
      * @return mixed
      */
-    public function getFiles($name){}
+    public function getFiles($name = null){}
 
     /**
      * (Yaf >= 2.2.9)
