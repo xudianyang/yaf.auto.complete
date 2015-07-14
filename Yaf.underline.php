@@ -2607,7 +2607,7 @@ final class Yaf_Config_Simple extends Yaf_Config_Abstract
      * @param string $config 储存配置的数组
      * @param string $readonly 是否只读
      */
-    public function __construct($config, $readonly){}
+    public function __construct($config, $readonly = null){}
 
     /**
      * (Yaf >= 2.2.9)
