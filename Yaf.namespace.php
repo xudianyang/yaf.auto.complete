@@ -2013,21 +2013,21 @@ namespace Yaf
          * (Yaf >= 2.2.9) 
          * 路由请求
          *
-         * @param mixed $request
+         * @param Request_Abstract $request
          *
          * @return Boolean
          */
-        public function route($request);
+        public function route(Request_Abstract $request);
 
         /**
          * (Yaf >= 2.3.2)
          * 组合uri，路由解析的逆操作
          *
          * @param array $info
-         * @param array $query
+         * @param mixed $query
          * @return String
          */
-        public function assemble ($info, $query);
+        public function assemble(array $info, array $query = NULL);
     }
 
     /**
@@ -2051,24 +2051,24 @@ namespace Yaf
         public function match(){}
 
         /**
-         * (Yaf >= 2.2.9) 
+         * (Yaf >= 2.2.9)
          * 路由请求
          *
          * @param Request_Abstract $request
          *
          * @return Boolean
          */
-        public function route(Request_Abstract $request){}
+         public function route(Request_Abstract $request){}
 
         /**
          * (Yaf >= 2.3.2)
          * 组合uri，路由解析的逆操作
          *
          * @param array $info
-         * @param array $query
+         * @param mixed $query
          * @return String
          */
-        public function assemble($info, $query){}
+        public function assemble(array $info, array $query = NULL){}
     }
 
     /**
@@ -3262,10 +3262,10 @@ namespace Yaf\Route
          * 组合uri，路由解析的逆操作
          *
          * @param array $info
-         * @param array $query
+         * @param mixed $query
          * @return String
          */
-        public function assemble($info, $query){}
+        public function assemble(array $info, array $query = NULL){}
     }
 
     /**
@@ -3476,7 +3476,7 @@ namespace Yaf\Route
          * @param array $query
          * @return String
          */
-        public function assemble($info, $query){}
+        public function assemble(array $info, array $query = NULL){}
     }
 
     /**
@@ -3523,7 +3523,7 @@ namespace Yaf\Route
          * @param array $query
          * @return String
          */
-        public function assemble($info, $query){}
+        public function assemble(array $info, array $query = NULL){}
     }
 }
 

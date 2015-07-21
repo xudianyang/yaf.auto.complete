@@ -2007,18 +2007,18 @@ interface Yaf_Route_Interface
      * (Yaf >= 2.2.9)
      * 路由请求
      *
-     * @param mixed $request
+     * @param Yaf_Request_Abstract $request
      *
      * @return Boolean
      */
-    public function route($request);
+    public function route(Yaf_Request_Abstract $request);
 
     /**
      * (Yaf >= 2.3.2)
      * 组合uri，路由解析的逆操作
      *
      * @param array $info
-     * @param array $query
+     * @param mixed $query
      * @return String
      */
     public function assemble (array $info, array $query = null);
@@ -2062,7 +2062,7 @@ class Yaf_Route_Static implements Yaf_Route_Interface
      * @param array $query
      * @return String
      */
-    public function assemble($info, $query){}
+    public function assemble (array $info, array $query = null){}
 }
 
 /**
@@ -3231,10 +3231,10 @@ final class Yaf_Route_Map implements Yaf_Route_Interface
      * 组合uri，路由解析的逆操作
      *
      * @param array $info
-     * @param array $query
+     * @param mixed $query
      * @return String
      */
-    public function assemble($info, $query){}
+    public function assemble(array $info, array $query = NULL){}
 }
 
 /**
@@ -3312,7 +3312,7 @@ final class Yaf_Route_Regex implements Yaf_Route_Interface
      * @param array $query
      * @return String
      */
-    public function assemble($info, $query){}
+    public function assemble(array $info, array $query = NULL){}
 }
 
 /**
@@ -3380,7 +3380,7 @@ final class Yaf_Route_Rewrite implements Yaf_Route_Interface
      * @param array $query
      * @return String
      */
-    public function assemble($info, $query){}
+    public function assemble(array $info, array $query = NULL){}
 }
 
 /**
@@ -3445,7 +3445,7 @@ final class Yaf_Route_Simple implements Yaf_Route_Interface
      * @param array $query
      * @return String
      */
-    public function assemble($info, $query){}
+    public function assemble(array $info, array $query = NULL){}
 }
 
 /**
@@ -3492,7 +3492,7 @@ final class Yaf_Route_Supervar implements Yaf_Route_Interface
      * @param array $query
      * @return String
      */
-    public function assemble($info, $query){}
+    public function assemble(array $info, array $query = NULL){}
 }
 
 /**
