@@ -2810,10 +2810,11 @@ namespace Yaf\Request
          * 获取$_GET中名为$name的参数值
          *
          * @param string $name 变量名
+         * @param string $default 默认值
          *
          * @return mixed
          */
-        public function getQuery($name = null){}
+        public function getQuery($name = null, $default = null){}
 
         /**
          * (Yaf >= 2.2.9) 
@@ -2830,10 +2831,11 @@ namespace Yaf\Request
          * 获取$_POST中名为$name的参数值
          *
          * @param string $name 变量名
+         * @param string $default 默认值
          *
          * @return mixed
          */
-        public function getPost($name = null){}
+        public function getPost($name = null, $default = null){}
 
         /**
          * (Yaf >= 2.2.9) 
