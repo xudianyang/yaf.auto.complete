@@ -857,6 +857,9 @@ namespace Yaf
          * (Yaf >= 2.2.9) 
          * 视图对象
          *
+         * PHP代码中也可以这样获取：
+         * $view = $this->getView();
+         *
          * @var View_Interface
          */
         protected $_view;
@@ -916,6 +919,14 @@ namespace Yaf
          * @return Controller_Abstract
          */
         public function initView(){}
+
+        /**
+         * (Yaf >= 2.2.9)
+         * 返回视图对象
+         *
+         * @return Yaf\View_Interface
+         */
+        public function getView(){}
 
         /**
          * (Yaf >= 2.2.9) 

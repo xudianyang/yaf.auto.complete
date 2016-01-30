@@ -851,6 +851,9 @@ abstract class Yaf_Controller_Abstract
      * (Yaf >= 2.2.9)
      * 视图对象
      *
+     * PHP代码中也可以这样获取：
+     * $view = $this->getView();
+     *
      * @var Yaf_View_Interface
      */
     protected $_view;
@@ -910,6 +913,14 @@ abstract class Yaf_Controller_Abstract
      * @return Yaf_Controller_Abstract
      */
     public function initView(){}
+
+    /**
+     * (Yaf >= 2.2.9)
+     * 返回视图对象
+     *
+     * @return Yaf_View_Interface
+     */
+    public function getView(){}
 
     /**
      * (Yaf >= 2.2.9)
