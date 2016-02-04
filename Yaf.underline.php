@@ -1066,7 +1066,7 @@ interface Yaf_View_Interface
      *
      * @return Boolean
      */
-    public function display($tpl, $var_array);
+    public function display($tpl, $var_array = array());
 
     /**
      * (Yaf >= 2.2.9)
