@@ -3373,7 +3373,7 @@ final class Yaf_Route_Rewrite implements Yaf_Route_Interface
      * @param array $route 路由信息
      * @param array $verify
      */
-    public function __construct($match, $route, $verify){}
+    public function __construct($match, $route, $verify = NULL){}
 
     /**
      * (Yaf >= 2.2.9)
