@@ -1939,9 +1939,7 @@ abstract class Yaf_Response_Abstract
      * (Yaf >= 2.2.9)
      * 清空响应正文
      *
-     * @deprecated 总是返回false
-     *
-     * @return Boolean
+     * @return Yaf_Response_Abstract|false
      */
     public function clearBody(){}
 
@@ -1949,39 +1947,39 @@ abstract class Yaf_Response_Abstract
      * (Yaf >= 2.2.9)
      * 获取响应报头
      *
-     * @deprecated 总是返回null
+     * @param string $name
      *
-     * @return null
+     * @return string|array
      */
-    public function getHeader(){}
+    public function getHeader($name = null){}
 
     /**
      * (Yaf >= 2.2.9)
      * 获取所有响应报头
      *
-     * @deprecated 总是返回false
+     * @param array $headers
      *
      * @return Boolean
      */
-    public function setAllHeaders(){}
+    public function setAllHeaders($headers){}
 
     /**
      * (Yaf >= 2.2.9)
      * 设置响应报头
      *
-     * @deprecated 总是返回null
+     * @param string $name
+     * @param string $value
+     * @param bool   $replace
      *
-     * @return null
+     * @return Boolean
      */
-    public function setHeader(){}
+    public function setHeader($name, $value, $replace = true){}
 
     /**
      * (Yaf >= 2.2.9)
      * 清空响应报头
      *
-     * @deprecated 总是返回false
-     *
-     * @return Boolean
+     * @return Yaf_Response_Abstract|false
      */
     public function clearHeaders(){}
 
